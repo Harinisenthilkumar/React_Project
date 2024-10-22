@@ -11,6 +11,7 @@ import men_banner from './Components/Assets/banner_mens.png'
 import women_banner from "./Components/Assets/banner_women.png";
 import kids_banner from "./Components/Assets/banner_kids.png";
 import RelatedProducts from "./Components/RelatedProducts/RelatedProducts";
+
 function App() {
   return (
     <div>
