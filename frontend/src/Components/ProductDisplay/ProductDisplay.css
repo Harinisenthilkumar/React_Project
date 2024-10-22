@@ -8,6 +8,8 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
     margin: 20px auto;
+    flex-wrap: wrap;
+    /* Allow wrapping for smaller screens */
 }
 
 /* Left section for product images */
@@ -209,6 +211,8 @@ button:hover {
 @media screen and (max-width: 900px) {
     .productdisplay {
         flex-direction: column;
+        padding: 10px;
+        /* Adjust padding for smaller screens */
     }
 
     .productdisplay-left,
@@ -220,14 +224,74 @@ button:hover {
     .productdisplay-main-img {
         width: 100%;
         height: auto;
+        /* Maintain aspect ratio */
     }
 
     .productdisplay-image-list img {
         width: 80px;
         height: 80px;
+        /* Adjust thumbnail size */
     }
 
     button {
         width: 100%;
+        /* Full width for buttons on smaller screens */
+    }
+
+    .productdisplay-right {
+        padding-left: 0;
+        /* Remove left padding on small screens */
+    }
+
+    .productdisplay-right h1 {
+        font-size: 1.5rem;
+        /* Adjust product title size */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .productdisplay {
+        padding: 10px;
+        /* Further reduce padding */
+    }
+
+    .productdisplay-image-list {
+        gap: 10px;
+        /* Reduce gap for smaller screens */
+    }
+
+    .productdisplay-image-list img {
+        width: 70px;
+        height: 70px;
+        /* Further adjust thumbnail size */
+    }
+
+    .productdisplay-right h1 {
+        font-size: 1.3rem;
+        /* Smaller product title size */
+    }
+
+    .productdisplay-right-price-new {
+        font-size: 1.5rem;
+        /* Adjust price size */
+    }
+
+    button {
+        padding: 10px 15px;
+        /* Smaller button padding */
+        font-size: 1rem;
+        /* Adjust button font size */
+    }
+
+    .productdisplay-right-size-list {
+        flex-direction: column;
+        /* Stack size options vertically */
+    }
+
+    .productdisplay-right-size-list div {
+        width: 100%;
+        /* Full width for size options */
+        text-align: center;
+        /* Center text in size options */
     }
 }

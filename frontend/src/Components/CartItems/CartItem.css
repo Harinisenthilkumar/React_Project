@@ -1,0 +1,159 @@
+.cartitems {
+    margin: 100px 170px;
+}
+
+.cartitems hr {
+    height: 3px;
+    border: 0;
+    background: #e2e2e2;
+}
+
+.cartitems-format-main {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr auto;
+    /* Added auto for the remove icon */
+    align-items: center;
+    gap: 75px;
+    padding: 20px 0px;
+    color: #454545;
+    /* Corrected from 'colour' to 'color' */
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cartitems-format {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.carticon-product-icon {
+    height: 62px;
+}
+
+.cartitems-remove-icon {
+    width: 15px;
+    margin: 0px 40px;
+    cursor: pointer;
+}
+
+.cartitems-quantity {
+    width: 64px;
+    height: 50px;
+    border: 2px solid black;
+    background: white;
+    color: black;
+}
+.cartitems-down {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    /* Light background for the total section */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.cartitems-total {
+    margin-bottom: 20px;
+}
+
+.cartitems-total h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    /* Darker text color for better visibility */
+}
+
+.cartitems-total-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    /* Spacing between items */
+    border-bottom: 1px solid #e2e2e2;
+    /* Separator line */
+}
+
+.cartitems-total-items p {
+    font-size: 18px;
+    color: #555;
+    /* Lighter text for subtotals */
+}
+
+.cartitems-total-items h3 {
+    font-size: 20px;
+    color: #333;
+    /* Darker color for total */
+}
+
+button {
+    padding: 12px 20px;
+    /* Button padding */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners */
+    background-color: #007bff;
+    /* Primary button color */
+    color: white;
+    /* Text color */
+    font-size: 16px;
+    cursor: pointer;
+    /* Pointer on hover */
+    transition: background-color 0.3s ease;
+    /* Smooth transition for hover */
+    margin-top: 10px;
+    /* Margin above button */
+}
+
+button:hover {
+    background-color: #0056b3;
+    /* Darker shade on hover */
+}
+
+.cartitems-promocode {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff;
+    /* White background for promo box */
+    border-radius: 8px;
+    /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+}
+
+.cartitems-promocode p {
+    margin-bottom: 10px;
+    /* Spacing below the paragraph */
+    font-size: 16px;
+    color: #333;
+}
+
+.cartitems-promobox {
+    display: flex;
+    /* Align input and button in a row */
+    gap: 10px;
+    /* Spacing between input and button */
+}
+
+.cartitems-promobox input {
+    flex: 1;
+    /* Allow input to take available space */
+    padding: 10px;
+    /* Padding for input */
+    border: 2px solid #e2e2e2;
+    /* Light border */
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 16px;
+}
+
+.cartitems-promobox button {
+    background-color: #28a745;
+    /* Green button color */
+}
+
+.cartitems-promobox button:hover {
+    background-color: #218838;
+    /* Darker shade on hover */
+}

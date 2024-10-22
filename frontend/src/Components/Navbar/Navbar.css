@@ -242,3 +242,46 @@
         /* Adjust size */
     }
 }
+
+/* Additional styles for iPhone 6, 7, and 8 */
+@media (max-width: 375px) {
+    .navbar {
+        padding: 8px;
+        /* Further reduce padding for iPhone screens */
+    }
+
+    .nav-menu {
+        font-size: 14px;
+        /* Reduce font size for iPhone screens */
+        gap: 15px;
+        /* Reduce gap between items */
+    }
+
+    .nav-logo img {
+        width: 130px;
+        /* Adjust logo size for iPhone screens */
+        height: 130px;
+        /* Adjust logo size */
+    }
+
+    .nav-logo p {
+        font-size: 20px;
+        /* Further reduce text size for logo */
+    }
+
+    .nav-login-cart button {
+        width: 100px;
+        /* Adjust button width for iPhone screens */
+        font-size: 14px;
+        /* Adjust font size for the button */
+    }
+
+    .nav-cart-count {
+        font-size: 9px;
+        /* Adjust font size for cart count */
+        width: 16px;
+        /* Adjust size */
+        height: 16px;
+        /* Adjust size */
+    }
+}
