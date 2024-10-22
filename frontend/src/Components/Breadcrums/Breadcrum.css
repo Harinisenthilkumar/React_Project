@@ -1,0 +1,70 @@
+/* General Styles */
+.breadcrum {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+    padding: 15px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.breadcrum img {
+    width: 16px;
+    height: 16px;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Text Links Styling */
+.breadcrum a {
+    text-decoration: none;
+    color: #555;
+    cursor: pointer;
+    position: relative;
+    padding: 0 5px;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effects */
+.breadcrum a:hover {
+    color: #ff6f61;
+}
+
+.breadcrum a:hover::after {
+    width: 100%;
+}
+
+.breadcrum a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #ff6f61;
+    transition: width 0.3s ease;
+}
+
+/* Arrow Animation */
+.breadcrum img:hover {
+    transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .breadcrum {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .breadcrum img {
+        width: 12px;
+        height: 12px;
+        margin: 0 6px;
+    }
+}

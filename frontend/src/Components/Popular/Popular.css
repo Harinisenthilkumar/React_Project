@@ -1,0 +1,170 @@
+/* Main container for Popular Items section */
+.popular {
+    flex:wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg,
+            rgba(248, 221, 189, 0.9),
+            rgba(206, 171, 241, 0.9));
+    min-height: 90vh;
+}
+
+.popular h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #374151;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.popular hr {
+    width: 100px;
+    height: 4px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+/* Container for popular items */
+.popular-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/* Popular item cards (4 items in a row) */
+.popular-item {
+    width: calc(25% - 15px);
+    height: 350px;
+    background: linear-gradient(135deg, rgba(248, 221, 189, 0.9), rgba(206, 171, 241, 0.9));
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.popular-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.popular-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.popular-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 15px;
+    color: #374151;
+    text-align: center;
+}
+
+.popular-item p {
+    font-size: 14px;
+    color: #6b7280;
+    text-align: center;
+    margin: 10px;
+}
+
+.popular-item .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #16a34a;
+    text-align: center;
+    margin: 10px;
+}
+
+.popular-item .old-price {
+    text-decoration: line-through;
+    color: #9ca3af;
+    margin-left: 5px;
+}
+
+.popular-item:hover img {
+    opacity: 0.8;
+}
+
+/* Overlay effect */
+.popular-item:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .popular h1 {
+        font-size: 40px;
+    }
+
+    .popular-items {
+        gap: 20px;
+    }
+
+    .popular-item {
+        width: calc(50% - 10px);
+        height: auto;
+    }
+
+    .popular-item img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .popular h1 {
+        font-size: 30px;
+    }
+
+    .popular {
+        padding: 20px 5px;
+    }
+
+    .popular-items {
+        gap: 15px;
+    }
+
+    .popular-item {
+        width: 100%;
+        height: auto;
+        max-width: 220px;
+    }
+
+    .popular-item img {
+        height: 120px;
+    }
+
+    .popular-item h3 {
+        font-size: 16px;
+    }
+
+    .popular-item p {
+        font-size: 12px;
+    }
+
+    .popular-item .price {
+        font-size: 14px;
+    }
+}

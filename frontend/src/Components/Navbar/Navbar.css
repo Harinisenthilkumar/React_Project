@@ -1,0 +1,244 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    padding: 16px;
+    box-shadow: 3px 3px 4px -5px black;
+    background: linear-gradient(135deg,
+            rgba(248, 221, 189, 0.9),
+            rgba(206, 171, 241, 0.9));
+    flex-wrap: wrap;
+    /* Allow items to wrap in smaller screens */
+}
+
+/* Logo Styles */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-logo img {
+    width: 300px;
+    height: 300px;
+    transition: transform 0.4s ease;
+}
+
+.nav-logo img:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+.nav-logo p {
+    color: #171717;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1.2px;
+    animation: textGlow 2s infinite alternate;
+    text-transform: uppercase;
+}
+
+/* Keyframes for glowing effect */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 10px #FF4141, 0 0 20px #FF4141;
+    }
+
+    100% {
+        text-shadow: 0 0 20px #FF4141, 0 0 30px #FF4141;
+    }
+}
+
+/* Navigation Menu */
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+    color: #626262;
+    font-size: 20px;
+    font-weight: 500;
+    animation: fadeIn 1.5s ease;
+    /* Fade-in effect for menu */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Navigation Items */
+.nav-menu li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    gap: 4px;
+    position: relative;
+    transition: color 0.3s ease;
+    animation: bounceIn 0.5s ease forwards;
+    /* Bouncing animation on load */
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-menu li:hover {
+    color: #FF4141;
+    /* Color change on hover */
+}
+
+.nav-menu li hr {
+    width: 0;
+    height: 2px;
+    background-color: #FF4141;
+    border-radius: 10px;
+    border: none;
+    transition: width 0.3s ease-in-out;
+    /* Smooth underline animation */
+}
+
+.nav-menu li.active hr {
+    width: 100%;
+    /* Show underline only for active item */
+}
+
+.nav-menu li:hover hr {
+    width: 0;
+    /* No underline on hover */
+}
+
+/* Login and Cart Styles */
+.nav-login-cart {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-login-cart button {
+    width: 156px;
+    height: 48px;
+    border: 1px solid #7a7a7a;
+    border-radius: 75px;
+    background: linear-gradient(135deg,
+            rgba(243, 236, 228, 0.9),
+            rgba(198, 155, 241, 0.9));
+    color: #515151;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.nav-login-cart button:active {
+    background: wheat;
+}
+
+.nav-cart-count {
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -30px;
+    margin-left: -30px;
+    background: red;
+    color: white;
+    border-radius: 11px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        /* Center items in smaller screens */
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        /* Allow items to wrap */
+        justify-content: center;
+        /* Center items */
+        gap: 20px;
+        /* Reduce gap between items */
+        font-size: 18px;
+        /* Adjust font size for smaller screens */
+    }
+
+    .nav-logo img {
+        width: 200px;
+        /* Make logo smaller */
+        height: 200px;
+        /* Make logo smaller */
+    }
+
+    .nav-logo p {
+        font-size: 24px;
+        /* Reduce text size for logo */
+    }
+
+    .nav-login-cart button {
+        width: 140px;
+        /* Adjust button width for smaller screens */
+    }
+
+    .nav-cart-count {
+        font-size: 12px;
+        /* Adjust font size for cart count */
+        width: 20px;
+        /* Adjust size */
+        height: 20px;
+        /* Adjust size */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+        /* Reduce padding for mobile screens */
+    }
+
+    .nav-menu {
+        font-size: 16px;
+        /* Further reduce font size for mobile screens */
+    }
+
+    .nav-logo img {
+        width: 150px;
+        /* Make logo even smaller */
+        height: 150px;
+        /* Make logo even smaller */
+    }
+
+    .nav-login-cart button {
+        width: 120px;
+        /* Adjust button width for mobile screens */
+    }
+
+    .nav-cart-count {
+        font-size: 10px;
+        /* Adjust font size for cart count */
+        width: 18px;
+        /* Adjust size */
+        height: 18px;
+        /* Adjust size */
+    }
+}

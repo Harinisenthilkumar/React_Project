@@ -1,0 +1,105 @@
+/* General container to hold carousel and content */
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg,
+        rgba(248, 221, 189, 0.9),
+        rgba(206, 171, 241, 0.9)); /* Apply gradient background to entire container */
+}
+
+/* Carousel section (takes up half of the screen) */
+.hero {
+    height: 50vh; /* Carousel height - half screen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure image covers the container without distortion */
+    border-radius: 10px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.carousel-caption h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Content section below the carousel */
+.content-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    max-width: 800px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.explore-btn {
+    background-color: #ff4141;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.explore-btn:hover {
+    background-color: #ff6969;
+}
+
+/* Slick Dots custom style */
+.slick-dots {
+    bottom: 20px;
+}
+
+.slick-dots li button:before {
+    font-size: 12px;
+    color: #fff;
+}
+
+.slick-dots li.slick-active button:before {
+    color: #ff4141;
+}

@@ -1,0 +1,233 @@
+/* Container for the entire product display */
+.productdisplay {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* Left section for product images */
+.productdisplay-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for the image thumbnails */
+.productdisplay-image-list {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.productdisplay-image-list img {
+    width: 100px;
+    /* Increased size */
+    height: 100px;
+    /* Increased size */
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    /* New box shadow for better emphasis */
+}
+
+.productdisplay-image-list img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main product image */
+.productdisplay-main-img {
+    width: 586px;
+    /* Slightly larger */
+    height: 700px;
+    /* Slightly larger */
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid #e0e0e0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.productdisplay-main-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow */
+}
+
+/* Right section for product details */
+.productdisplay-right {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 30px;
+    /* Added padding for better spacing */
+}
+
+.productdisplay-right h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Star rating and reviews */
+.productdisplay-right-stars {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.productdisplay-right-stars img {
+    width: 25px;
+    /* Increased star size */
+    height: 25px;
+    margin-right: 5px;
+}
+
+.productdisplay-right-stars p {
+    margin-left: 10px;
+    color: #777;
+    font-weight: bold;
+}
+
+/* Price section */
+.productdisplay-right-price {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.productdisplay-right-price-old {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #999;
+}
+
+.productdisplay-right-price-new {
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: #e74c3c;
+}
+
+/* Product description */
+.productdisplay-right-description {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.5;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 15px;
+}
+
+/* Size selection */
+.productdisplay-right-size {
+    margin-bottom: 20px;
+}
+
+.productdisplay-right-size h1 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.productdisplay-right-size-list {
+    display: flex;
+    gap: 20px;
+}
+
+.productdisplay-right-size-list div {
+    padding: 12px 25px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.productdisplay-right-size-list div:hover {
+    background-color: #ddd;
+    transform: scale(1.05);
+    /* New hover effect */
+}
+
+/* Add to cart button */
+button {
+    padding: 15px 25px;
+    background-color: #3498db;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+    /* Added button animation */
+}
+
+/* Category and tags */
+.productdisplay-right-category,
+.productdisplay-right-tags {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.productdisplay-right-category span,
+.productdisplay-right-tags span {
+    font-weight: bold;
+    color: #333;
+    text-decoration: underline;
+    /* Added text decoration */
+}
+
+/* New addition: Hover animation on product name */
+.productdisplay-right h1:hover {
+    color: #3498db;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* New addition: Responsive shadow for entire product section */
+.productdisplay:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 900px) {
+    .productdisplay {
+        flex-direction: column;
+    }
+
+    .productdisplay-left,
+    .productdisplay-right {
+        flex: unset;
+        width: 100%;
+    }
+
+    .productdisplay-main-img {
+        width: 100%;
+        height: auto;
+    }
+
+    .productdisplay-image-list img {
+        width: 80px;
+        height: 80px;
+    }
+
+    button {
+        width: 100%;
+    }
+}

@@ -1,0 +1,133 @@
+/* Main container styling */
+.shop-category {
+    padding: 20px;
+    background: linear-gradient(135deg,
+            rgba(248, 221, 189, 0.9),
+            rgba(206, 171, 241, 0.9));
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+}
+
+/* Banner image styling */
+.shopcategory-banner {
+    width: 100%;
+    height: 500px;
+    /* Set a fixed height for the banner */
+    object-fit: cover;
+    /* Ensure the image covers the area */
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Sort section */
+.Shopcategory-indexSort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Sort by button styling */
+.shopcategory-sort {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.sort-btn {
+    padding: 10px 15px;
+    background: linear-gradient(135deg, rgba(66, 152, 226), rgba(136, 88, 233));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    /* Space between text and icon */
+}
+
+.sort-btn:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, rgba(48, 105, 209), rgba(118, 71, 216));
+}
+
+/* Dropdown icon styling */
+.dropdown-icon {
+    transition: transform 0.3s ease;
+}
+
+/* Products container using flexbox */
+.shopcategory-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Each product item */
+.shopcategory-products .item {
+    flex: 0 1 calc(25% - 20px);
+    /* 4 items per row */
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    /* Rounded corners */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    /* Deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    height: 350px;
+    /* Increased height for product cards */
+}
+
+/* Product item hover effect */
+.shopcategory-products .item:hover {
+    transform: translateY(-15px);
+    /* Increased hover lift */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    /* Enhanced shadow */
+    background-color: rgba(248, 221, 189, 0.3);
+    /* Light background on hover */
+    animation: pulse 0.5s infinite;
+    /* Added animation */
+}
+
+/* Pulse animation for product item */
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: translateY(-15px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Explore More button styling */
+.shopcategory-loadmore {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.loadmore-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, rgba(66, 152, 226), rgba(136, 88, 233));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    font-size: 16px;
+}
+
+.loadmore-btn:hover {
+    transform: scale(1.05);
+    /* Scale up on hover */
+    background: linear-gradient(135deg, rgba(48, 105, 209), rgba(118, 71, 216));
+    /* Darker gradient on hover */
+}

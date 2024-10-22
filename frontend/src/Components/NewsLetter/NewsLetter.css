@@ -1,0 +1,106 @@
+/* Main container with your gradient theme */
+.newsletter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(248, 221, 189, 0.9), rgba(206, 171, 241, 0.9));    /* Your custom theme */
+    padding: 50px 20px;
+    min-height: 60vh;
+    
+}
+
+/* Inner content box */
+.newsletter {
+    text-align: center;
+    width: 100%;
+    /* Full width */
+    max-width: 800px;
+    /* Increased max width */
+    padding: 40px;
+    /* Increased padding */
+    background-color: rgba(0, 0, 0, 0.1);
+    /* Light blue  theme with transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.newsletter h1 {
+    font-size: 32px;
+    /* Increased font size */
+    font-weight: bold;
+    color: black;
+    /* White text for contrast */
+    margin-bottom: 15px;
+    background: -webkit-linear-gradient(45deg, #4281e2, #8858e9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.newsletter p {
+    font-size: 18px;
+    /* Increased font size */
+    color: black;
+    /* White text for contrast */
+    margin-bottom: 20px;
+}
+
+/* Form container */
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Input field */
+.email-input {
+    padding: 14px 20px;
+    /* Increased padding */
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.email-input:focus {
+    border-color: #4281e2;
+}
+
+/* Button with gradient */
+.subscribe-btn {
+    padding: 14px 25px;
+    /* Increased padding */
+    background: linear-gradient(135deg, #4281e2, #8858e9);
+    /* Gradient button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background: linear-gradient(135deg, #3069d1, #7647d8);
+    /* Darker gradient on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .newsletter-form {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .email-input {
+        width: 100%;
+    }
+
+    .subscribe-btn {
+        width: 100%;
+    }
+}

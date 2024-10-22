@@ -1,0 +1,135 @@
+/* Main container styling */
+.loginSignup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* Full viewport height */
+    background: linear-gradient(135deg, rgba(248, 221, 189, 0.9), rgba(206, 171, 241, 0.9));
+    /* Background gradient */
+}
+
+/* Container for form */
+.loginsignip-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    width: 90%;
+    max-width: 400px;
+    /* Maximum width for the form */
+    text-align: center;
+    animation: fadeIn 0.5s ease;
+    /* Fade in animation */
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        /* Slide down effect */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Heading style */
+.loginsignip-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    /* Darker text color */
+}
+
+/* Fields styling */
+.loginsignup-fields {
+    display: flex;
+    flex-direction: column;
+    /* Vertical alignment */
+    gap: 15px;
+    /* Space between fields */
+    margin-bottom: 20px;
+}
+
+/* Input fields styling */
+.loginsignup-fields input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Transition for border color on focus */
+}
+
+/* Input focus state */
+.loginsignup-fields input:focus {
+    border-color: #4281e2;
+    /* Change border color on focus */
+    outline: none;
+    /* Remove outline */
+    box-shadow: 0 0 5px rgba(66, 130, 224, 0.5);
+    /* Add shadow effect */
+}
+
+/* Button styling */
+button {
+    padding: 12px;
+    background: linear-gradient(135deg, rgba(66, 152, 226), rgba(136, 88, 233));
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    /* Transition for hover effects */
+}
+
+/* Button hover effect */
+button:hover {
+    transform: translateY(-2px);
+    /* Slight upward movement on hover */
+    background: linear-gradient(135deg, rgba(48, 105, 209), rgba(118, 71, 216));
+    /* Darker gradient on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    /* Add shadow on hover */
+}
+
+/* Login prompt styling */
+.loginsignup-login {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    /* Lighter text color */
+}
+
+/* Login link styling */
+.loginsignup-login span {
+    color: #4281e2;
+    /* Link color */
+    cursor: pointer;
+    /* Pointer cursor for link */
+    text-decoration: underline;
+    /* Underline the link */
+}
+
+/* Checkbox and agree text styling */
+.loginsignup-agree {
+    display: flex;
+    align-items: center;
+    /* Center checkbox and text vertically */
+    justify-content: center;
+    /* Center horizontally */
+    font-size: 14px;
+    color: #666;
+    /* Lighter text color */
+}
+
+/* Checkbox styling */
+.loginsignup-agree input {
+    margin-right: 8px;
+    /* Space between checkbox and text */
+}

@@ -1,0 +1,143 @@
+/* Container for New Items section */
+.new-items {
+    background: linear-gradient(135deg, rgba(248, 221, 189, 0.9), rgba(206, 171, 241, 0.9));
+    padding: 50px 20px;
+    text-align: center;
+    animation: fadeInSection 1s ease-in-out;
+}
+
+.new-items h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.new-items hr {
+    border: 1px solid rgba(206, 171, 241, 0.9);
+    margin-bottom: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flex container for the items */
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Individual item card */
+.item {
+    background: linear-gradient(135deg, rgb(66, 152, 226), rgb(136, 88, 233));
+    /* Blue-violet gradient */
+    border-radius: 15px;
+    padding: 20px;
+    width: calc(25% - 20px);
+    /* 4 cards per row, accounting for gaps */
+    max-width: 280px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    animation: fadeInItem 0.8s ease-in-out;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Image styling */
+.item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease-in-out;
+    /* Image hover animation */
+}
+
+.item:hover img {
+    transform: scale(1.1);
+    /* Slight zoom on hover */
+}
+
+/* Name and price section */
+.item-info {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.item-info h3 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.item-info .prices {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+.item-info .new-price {
+    color: #ff6f61;
+    font-weight: bold;
+}
+
+.item-info .old-price {
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Fade-in animation for section */
+@keyframes fadeInSection {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Fade-in animation for items */
+@keyframes fadeInItem {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .item {
+        width: calc(50% - 20px);
+        /* 2 cards per row on small screens */
+    }
+
+    .item img {
+        height: 200px;
+    }
+
+    .new-items h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .item {
+        width: calc(100% - 20px);
+        /* 1 card per row on extra small screens */
+    }
+}
