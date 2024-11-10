@@ -5,9 +5,7 @@
     align-items: center;
     gap: 30px;
     padding: 40px 20px;
-    background: linear-gradient(135deg,
-            rgba(248, 221, 189, 0.9),
-            rgba(206, 171, 241, 0.9));
+    background: linear-gradient(white);
     min-height: 90vh;
 }
 
@@ -43,7 +41,7 @@
 .popular-item {
     width: calc(25% - 15px);
     height: 350px;
-    background: linear-gradient(135deg, rgba(248, 221, 189, 0.9), rgba(206, 171, 241, 0.9));
+    background: linear-gradient(white);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);

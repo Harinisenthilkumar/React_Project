@@ -23,17 +23,17 @@ const Navbar = () => {
           </Link>
           {menu === "Menu" ? <hr /> : <></>}
         </li>
-        <li onClick={() => setMenu("Vegitarian")}>
-          <Link style={{ textDecoration: "none" }} to="/Vegitarian">
-            Vegitarian
+        <li onClick={() => setMenu("Vegetarian")}>
+          <Link style={{ textDecoration: "none" }} to="/Vegetarian">
+            Vegetarian
           </Link>{" "}
-          {menu === "Vegitarian" ? <hr /> : <></>}
+          {menu === "Vegetarian" ? <hr /> : <></>}
         </li>
-        <li onClick={() => setMenu("Non-Vegitarian")}>
-          <Link style={{ textDecoration: "none" }} to="/Non-Vegitarian">
-            Non-Vegitarian
+        <li onClick={() => setMenu("Non-Vegetarian")}>
+          <Link style={{ textDecoration: "none" }} to="/Non-Vegetarian">
+            Non-Vegetarian
           </Link>{" "}
-          {menu === "Non-Vegitarian" ? <hr /> : <></>}
+          {menu === "Non-Vegetarian" ? <hr /> : <></>}
         </li>
         <li onClick={() => setMenu("Desserts")}>
           <Link style={{ textDecoration: "none" }} to="/Desserts">
@@ -44,13 +44,25 @@ const Navbar = () => {
       </ul>
 
       <div className="nav-login-cart">
-        <Link style={{ textDecoration: "none" }} to="/Login">
-          <button>Login </button>
-        </Link>
+        {localStorage.getItem("auth-token") ? (
+          <button
+            onClick={() => {
+              localStorage.removeItem("auth-token");
+              window.location.replace("/"); // Redirect to home page after logout
+            }}
+          >
+            Logout
+          </button>
+        ) : (
+          <Link style={{ textDecoration: "none" }} to="/Login">
+            <button>Login</button>
+          </Link>
+        )}
 
         <Link style={{ textDecoration: "none" }} to="/cart">
-          <img src={cart_icon} alt="" />
+          <img src={cart_icon} alt="Cart Icon" />
         </Link>
+
         <div className="nav-cart-count">{getTotalCartItems()}</div>
       </div>
     </div>

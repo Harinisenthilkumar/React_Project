@@ -6,9 +6,8 @@
     justify-content: center;
     width: 100%;
     height: 100vh;
-    background: linear-gradient(135deg,
-        rgba(248, 221, 189, 0.9),
-        rgba(206, 171, 241, 0.9)); /* Apply gradient background to entire container */
+    background: linear-gradient(
+        white); /* Apply gradient background to entire container */
 }
 
 /* Carousel section (takes up half of the screen) */

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, rgba(248, 221, 189, 0.9), rgba(206, 171, 241, 0.9));    /* Your custom theme */
+    background: linear-gradient(135deg, rgba(248, 221, 189, 0.9),);    /* Your custom theme */
     padding: 50px 20px;
     min-height: 60vh;
     

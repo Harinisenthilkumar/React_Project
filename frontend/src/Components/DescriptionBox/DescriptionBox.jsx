@@ -14,7 +14,7 @@ const DescriptionBox = () => {
                        </div>
       
     </div>
-  )
+  )                                                                                                                                                                                                                                                                                                                                     
 }
 
 export default DescriptionBox

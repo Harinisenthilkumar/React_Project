@@ -1,0 +1,143 @@
+/* Container Styling for List Product */
+.list-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    /* Limits the width for large screens */
+    min-height: 740px;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+.listproduct-format-main {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Using repeat for cleaner code */
+    gap: 10px;
+    width: 100%;
+    padding: 15px 0;
+    color: #454545;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 2px solid #eee;
+}
+
+/* Item Rows Styling */
+.listproduct-format {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* Matches header columns */
+    align-items: center;
+    padding: 10px 0;
+    width: 100%;
+    color: #555;
+    font-size: 15px;
+    font-weight: 500;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+    /* Optional: for better row separation */
+}
+
+/* Icon Styling */
+.listproduct-product-icon {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listproduct-remove_icon {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content Scroll Area */
+.listproduct-allproducts {
+    overflow-y: auto;
+    max-height: 500px;
+    /* Sets max height for scroll */
+    width: 100%;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .list-product {
+        padding: 15px;
+        margin: 15px;
+    }
+
+    .listproduct-format-main,
+    .listproduct-format {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 800px) {
+    .list-product {
+        width: 95%;
+    }
+
+    .listproduct-format-main,
+    .listproduct-format {
+        grid-template-columns: repeat(4, 1fr);
+        /* Adjust columns for smaller screens */
+        font-size: 12px;
+    }
+
+    .listproduct-product-icon {
+        height: 50px;
+        /* Adjust icon size */
+    }
+
+    .listproduct-remove_icon {
+        justify-content: center;
+        /* Center the remove icon */
+        padding: 5px;
+        /* Add padding for better touch target */
+    }
+}
+
+@media (max-width: 600px) {
+
+    .listproduct-format-main,
+    .listproduct-format {
+        grid-template-columns: repeat(2, 1fr);
+        /* Stacks items on smaller screens */
+        font-size: 11px;
+        gap: 5px;
+        /* Reduce gap for better space utilization */
+    }
+
+    .list-product {
+        padding: 10px;
+        /* Adjust padding for small screens */
+    }
+
+    .listproduct-format {
+        font-size: 10px;
+        /* Further reduce font size */
+    }
+
+    .listproduct-product-icon {
+        height: 40px;
+        /* Adjust icon size for small screens */
+    }
+
+    .listproduct-remove_icon {
+        justify-content: center;
+        /* Center remove icon for better alignment */
+        margin-top: 5px;
+        /* Optional: Add spacing above the remove icon */
+        padding: 5px;
+        /* Increase padding for better touch targets */
+    }
+}

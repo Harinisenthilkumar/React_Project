@@ -1,0 +1,98 @@
+/* Navbar container */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Left section: Logo and brand name */
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: border-color 0.3s ease; 
+
+    /* Smaller size for a balanced look */
+    margin-right: 8px;
+}
+
+.navbar-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.navbar-title h1 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    animation: slideIn 0.5s ease-in-out;
+}
+
+.navbar-title h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    margin: 0;
+}
+
+/* Right section: Profile icon */
+.navbar-profile img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.navbar-profile img:hover {
+    border-color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px 15px;
+    }
+
+    .navbar-logo img {
+        height: 20px;
+    }
+
+    .navbar-title h1 {
+        font-size: 18px;
+    }
+
+    .navbar-title h4 {
+        font-size: 12px;
+    }
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

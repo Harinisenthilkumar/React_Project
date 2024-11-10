@@ -20,13 +20,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Shop />} />
           <Route
-            path="/Vegitarian"
-            element={<ShopCategory banner={men_banner} category="Vegitarian" />}
+            path="/Vegetarian"
+            element={<ShopCategory banner={men_banner} category="Vegetarian" />} //Spelling mistake video correct ah follow pannunga ohhh okok nan pathen sari ok bro
+          
           />
           <Route
-            path="/Non-Vegitarian"
+            path="/Non-Vegetarian"
             element={
-              <ShopCategory banner={women_banner} category="Non-Vegitarian" />
+              <ShopCategory banner={women_banner} category="Non-Vegetarian" /> //Change spelling, ena spelling
             }
           />
           <Route
